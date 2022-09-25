@@ -20,7 +20,7 @@ function App() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae facilis quis nostrum quibusdam quisquam impedit laboriosam laborum odio doloribus, alias mollitia totam sed! Consectetur perspiciatis, officia sit adipisci eius at.
       </p>
       <h1>nama saya yahya wkwkwkw</h1>
-      <input type="text" placeholder="masukan nama" onChange={(text) => setTulisan(text)} />
+      <input type="text" placeholder="masukan nama" onChange={(text) => setTulisan(text.target.value)} />
       <h3>{tulisan}</h3>
     </div>
   );
