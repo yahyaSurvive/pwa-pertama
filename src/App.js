@@ -1,7 +1,9 @@
 import "./App.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
+import { useState } from "react";
 
 function App() {
+  const [tulisan, setTulisan] = useState();
   return (
     <div className="App">
       <Navbar bg="warning" variant="dark">
@@ -18,13 +20,8 @@ function App() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae facilis quis nostrum quibusdam quisquam impedit laboriosam laborum odio doloribus, alias mollitia totam sed! Consectetur perspiciatis, officia sit adipisci eius at.
       </p>
       <h1>nama saya yahya wkwkwkw</h1>
-      <h1>nama saya yahya wkwkwkw</h1>
-      <h1>nama saya yahya wkwkwkw</h1>
-      <h1>nama saya yahya wkwkwkw</h1>
-      <h1>nama saya yahya wkwkwkw</h1>
-      <h1>nama saya yahya wkwkwkw</h1>
-      <h1>nama saya yahya wkwkwkw</h1>
-      <h1>nama saya yahya wkwkwkw</h1>
+      <input type="text" placeholder="masukan nama" onChange={(text) => setTulisan(text)} />
+      <h3>{tulisan}</h3>
     </div>
   );
 }
