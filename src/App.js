@@ -14,7 +14,7 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
-      <h1>yahya ne</h1>
+      <h1>yahya ne bang wkwkwkwkw</h1>
     </div>
   );
 }
