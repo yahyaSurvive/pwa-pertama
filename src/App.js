@@ -1,6 +1,7 @@
 import "./App.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { useState } from "react";
+import Users from "./Users";
 
 function App() {
   const [tulisan, setTulisan] = useState();
@@ -16,12 +17,13 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
-      <p>
+      {/* <Users /> */}
+      {/* <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae facilis quis nostrum quibusdam quisquam impedit laboriosam laborum odio doloribus, alias mollitia totam sed! Consectetur perspiciatis, officia sit adipisci eius at.
       </p>
       <h1>nama saya yahya wkwkwkw</h1>
       <input type="text" placeholder="masukan nama" onChange={(text) => setTulisan(text.target.value)} />
-      <h3>{tulisan}</h3>
+      <h3>{tulisan}</h3> */}
     </div>
   );
 }
