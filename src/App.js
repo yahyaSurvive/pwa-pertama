@@ -4,7 +4,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 function App() {
   return (
     <div className="App">
-      <Navbar bg="primary" variant="dark">
+      <Navbar bg="warning" variant="dark">
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
@@ -14,7 +14,10 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
-      <h1>yahya ne bang wkwkwkwkw</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae facilis quis nostrum quibusdam quisquam impedit laboriosam laborum odio doloribus, alias mollitia totam sed! Consectetur perspiciatis, officia sit adipisci eius at.
+      </p>
+      <h1>nama saya yahya wkwkwkw</h1>
     </div>
   );
 }
