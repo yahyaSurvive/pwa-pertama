@@ -2,9 +2,16 @@ import "./App.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { useState } from "react";
 import Users from "./Users";
+import CekStatus from "./CekStatus";
 
 function App() {
   const [tulisan, setTulisan] = useState();
+  const status = CekStatus();
+
+  // if (status === false) {
+  //   alert("kamun offline");
+  // }
+
   return (
     <div className="App">
       <Navbar bg="warning" variant="dark">
@@ -17,6 +24,7 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
+      <h1>{status ? "Online" : "Offline"}</h1>
       <Users />
       {/* <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae facilis quis nostrum quibusdam quisquam impedit laboriosam laborum odio doloribus, alias mollitia totam sed! Consectetur perspiciatis, officia sit adipisci eius at.
