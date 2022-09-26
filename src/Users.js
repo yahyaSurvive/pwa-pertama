@@ -4,7 +4,7 @@ import Table from "react-bootstrap/Table";
 const Users = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    let url = "https://jsonplaceholder.typicode.com/photos";
+    let url = "https://jsonplaceholder.typicode.com/photos?_start=0&_limit=100";
     fetch(url).then((response) => {
       response.json().then((result) => {
         console.log(result);
