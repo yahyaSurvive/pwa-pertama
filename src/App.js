@@ -2,6 +2,7 @@ import "./App.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { useState } from "react";
 import Users from "./Users";
+import User2 from "./User2";
 import CekStatus from "./CekStatus";
 import BottomTab from "./BottomTab";
 
@@ -26,7 +27,8 @@ function App() {
         </Container>
       </Navbar>
       <h1>{status ? "Online" : "Offline"}</h1>
-      <Users />
+      {/* <Users /> */}
+      <User2 />
       <BottomTab />
       {/* <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae facilis quis nostrum quibusdam quisquam impedit laboriosam laborum odio doloribus, alias mollitia totam sed! Consectetur perspiciatis, officia sit adipisci eius at.

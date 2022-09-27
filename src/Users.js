@@ -1,18 +1,30 @@
 import React, { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
 
+const firstLoad = 0;
+
 const Users = () => {
   const [data, setData] = useState([]);
+  const [start, setStart] = useState(firstLoad);
+  // let url = `https://jsonplaceholder.typicode.com/photos?_start=${start}&_limit=5`;
   useEffect(() => {
-    let url = "https://jsonplaceholder.typicode.com/photos?_start=0&_limit=100";
-    fetch(url).then((response) => {
+    fetch(`https://jsonplaceholder.typicode.com/photos?_start=${start}&_limit=5`).then((response) => {
       response.json().then((result) => {
-        console.log(result);
         setData(result);
       });
     });
-  }, []);
+  }, [start]);
 
+  const scrollToEnd = () => {
+    setStart(start + 5);
+  };
+
+  window.onscroll = () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      scrollToEnd();
+      console.log(data);
+    }
+  };
   return (
     <div>
       <h1>Data User</h1>
@@ -25,8 +37,8 @@ const Users = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((item) => (
-            <tr>
+          {data.map((item, i) => (
+            <tr key={i}>
               <td>{item.id}</td>
               <td>{item.title}</td>
               <td>
