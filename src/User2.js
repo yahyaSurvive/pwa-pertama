@@ -8,7 +8,7 @@ const Users = () => {
 
   const handleSrcoll = () => {
     if (window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight) {
-      setStart((prev) => prev + 5);
+      setStart((prev) => prev + 10);
     }
   };
 
@@ -18,7 +18,7 @@ const Users = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/photos?_start=${start}&_limit=5`)
+    fetch(`https://jsonplaceholder.typicode.com/photos?_start=${start}&_limit=10`)
       .then((response) => response.json())
       .then((json) => setDataUser((prev) => [...prev, ...json]));
   }, [start]);
